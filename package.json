@@ -17,7 +17,9 @@
     "body-parser": "~1.18.2",
     "express": "~4.16.2",
     "express-session": "~1.15.6",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "pg": "~7.4.0",
+    "sequelize": "~4.33.4"
   },
   "devDependencies": {
     "eslint": "~4.15.0",
@@ -35,8 +37,8 @@
   "homepage": "https://github.com/narekhovhannisyan/fingerprint-data-server#readme",
   "keywords": [
     "Basic",
-    "nodejs",
     "app",
+    "nodejs",
     "setup"
   ],
   "main": "src/bin/www",

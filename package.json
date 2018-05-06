@@ -1,0 +1,55 @@
+{
+  "name": "fingerprint-data-server",
+  "description": "Fingerprint Data Server",
+  "version": "1.0.0",
+  "author": "Narek Hovhannisyan",
+  "bugs": {
+    "url": "https://github.com/narekhovhannisyan/fingerprint-data-server/issues"
+  },
+  "contributors": [
+    {
+      "name": "Narek Hovhannisyan",
+      "email": "narekgilmour@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "bluebird": "~3.5.1",
+    "body-parser": "~1.18.2",
+    "express": "~4.16.2",
+    "express-session": "~1.15.6",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "~4.15.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1",
+    "jest": "~22.1.4",
+    "fixpack": "~2.3.1"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
+  "homepage": "https://github.com/narekhovhannisyan/fingerprint-data-server#readme",
+  "keywords": [
+    "Basic",
+    "nodejs",
+    "app",
+    "setup"
+  ],
+  "main": "src/bin/www",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narekhovhannisyan/fingerprint-data-server"
+  },
+  "scripts": {
+    "fix-package": "fixpack",
+    "lint": "./node_modules/.bin/eslint ./src --fix",
+    "start": "node ./src/bin/www",
+    "test": "jest"
+  }
+}

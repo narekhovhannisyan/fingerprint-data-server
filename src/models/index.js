@@ -1,9 +1,11 @@
 'use strict'
 
+const Sequelize = require('sequelize')
+
 const config = require('../config/config')
 
 /**
- * @property test
+ * @property workers
  */
 const db = {}
 
@@ -27,14 +29,16 @@ const operatorsAliases = {
 
 const sequelizeMain = new Sequelize(config.PG.CONNECTION_STRING_MAIN, {
   logging: false,
-  operatorsAliases
+  operatorsAliases,
+  ssl: true
 })
 
 /**
  * @description Import models working with main DB.
  */
-const MODELS_MAIN = []
-
+const MODELS_MAIN = [
+  './workers.model'
+]
 MODELS_MAIN.forEach((modelPath) => {
   const model = sequelizeMain['import'](modelPath)
   db[model.name] = model

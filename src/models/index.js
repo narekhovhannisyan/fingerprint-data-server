@@ -6,6 +6,7 @@ const config = require('../config/config')
 
 /**
  * @property workers
+ * @property timeTable
  */
 const db = {}
 
@@ -37,7 +38,8 @@ const sequelizeMain = new Sequelize(config.PG.CONNECTION_STRING_MAIN, {
  * @description Import models working with main DB.
  */
 const MODELS_MAIN = [
-  './workers.model'
+  './workers.model',
+  './time-table.model'
 ]
 MODELS_MAIN.forEach((modelPath) => {
   const model = sequelizeMain['import'](modelPath)

@@ -5,10 +5,12 @@ const express = require('express')
 
 const morgan = require('morgan')
 
-const { PathNotFoundError } = require('./util')
+const { PathNotFoundError } = require('./util').Errors
 
 const healthApi = require('./routes/health/health.api')
 const api = require('./routes')
+
+const faviconHandler = require('./middleware/favicon.middleware').faviconHandler
 
 const app = express()
 
@@ -25,6 +27,11 @@ app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ limit: '5mb', extended: false }))
 app.use(bodyParser.json({ limit: '5mb' }))
 
+/**
+ * @description Middleware - favicon handler:
+ * Handles favicon request from browser.
+ */
+app.use(faviconHandler)
 
 /**
  * @description Add health API (NO authorization, NO api prefix).

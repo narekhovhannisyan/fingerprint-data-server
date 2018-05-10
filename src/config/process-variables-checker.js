@@ -3,6 +3,7 @@
 const { ProcessEnvVariableError } = require('../util').Errors
 
 const REQUIRED_VARIABLES = [
+  'PG_CONNECTION_STRING_MAIN'
 ]
 
 module.exports = {
